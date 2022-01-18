@@ -4,16 +4,11 @@ Készíts egy programot, amely [1;10] intervallumon generál 5 darab véletlen e
 '''
 
 import random
-lista = []
-paros_lista = []
 
-for i in range(5):
-  veletlen = random.randint(1, 10)
-  lista.append(veletlen)
+lista = [random.randint(1, 10) for i in range(5) ]
 
-for x in lista:
-  if x % 2 == 0:
-    paros_lista.append(x)
+paros_lista = [i for i in lista if i % 2 == 0]
 
 print(f"Páros számok száma: {len(paros_lista)} ")
 print(f"A lista elemei: {lista} ")
+print(paros_lista)
